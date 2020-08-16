@@ -1,18 +1,18 @@
-Languages: [English](README.md) | [Brazilian Portuguese](README-pt-BR.md)
+Idiomas: [Inglês](README.md) | [Português do Brasil](README-pt-BR.md)
 
 ![Logo](resources/logo.png)
 
 # BuildContext
 
-Access most used properties in your `BuildContext` instance.
-This package relies on Dart's extension to provide easy access for the most used properties and functions that depends on the `BuildContext` instance.
+Acesse as propriedades mais usadas na sua instância do `BuildContext`.
+Este pacote se baseia na extensão do Dart para fornecer acesso fácil para as propriedades e funções mais usadas que dependem da instância do `BuildContext`.
 
-# Available Extensions
+# Extensões disponíveis
 
-I update this package frequently to add more extensions,
-bellow you can see the currently available extensions in the latest version.
+Eu atualizo este pacote com frequência para adicionar mais extensões,
+abaixo você pode ver as extensões que estão atualmente disponíveis na última versão.
 
-#### From the `MediaQuery`. Access properties right in the `context` instance. Available extensions:
+### Da classe `MediaQuery`. Acesse propriedades diretamente na instância do `context`. Extensões disponíveis:
 
 - `context.mediaQuerySize`
 - `context.orientation`
@@ -26,13 +26,12 @@ bellow you can see the currently available extensions in the latest version.
 - `context.mediaQueryViewPadding`
 - `context.mediaQueryViewInsets`
 - `context.mediaQueryShortestSide`
+- `context.isPhone`
+- `context.isTablet`
+- `context.isSmallTablet`
+- `context.isLargeTablet`
 
-* `context.isPhone`
-* `context.isTablet`
-* `context.isSmallTablet`
-* `context.isLargeTablet`
-
-#### From the `Navigator` class. Navigate with ease. Available extensions:
+### Da classe `Navigator`. Navegue com facilidade. Extensões disponíveis:
 
 - `context.push()`
 - `context.pop()`
@@ -40,7 +39,7 @@ bellow you can see the currently available extensions in the latest version.
 - `context.pushNamed()`
 - `context.popUntil()`
 
-#### From the `Theme` class. Access your themes right in the `context` instance. Available extensions:
+### Da classe `Theme`. Acesse seu tema diretamente na instância do `context`. Extensões disponíveis:
 
 - `context.theme`
 - `context.textTheme`
@@ -61,9 +60,9 @@ bellow you can see the currently available extensions in the latest version.
 - `context.isLinux`
 - `context.isFuchsia`
 
-#### From `Scaffold` class. Handle your scaffold in their `context`.
+### Da classe `Scaffold`. Lide com o seu Scaffold no seu `context`.
 
-Note: those must be called in the context of a `Scaffold` widget otherwise you might have errors.
+Observação: Esses devem ser chamados no contexto de um widget `Scaffold`, caso contrário, você pode ter erros.
 
 - `context.openDrawer()`
 - `context.openEndDrawer()`
@@ -72,21 +71,20 @@ Note: those must be called in the context of a `Scaffold` widget otherwise you m
 - `context.removeCurrentSnackBar()`
 - `context.showBottomSheet()`
 
-#### From `Form.of(context)` class.
+### Da classe `Form.of(context)`.
 
-Note: those must be called in the context of a `Scaffold` widget otherwise you might have errors.
+Observação: Esses devem ser chamados no contexto de um widget `Scaffold`, caso contrário, você pode ter erros.
 
 - `context.form.validate()`
 - `context.form.reset()`
 - `context.form.save()`
 
-#### From `FocusScope.of(context)` class.
+### Da classe `FocusScope.of(context)`.
 
 - `context.focusScope.hasFocus`
 - `context.focusScope.isFirstFocus`
 - `context.focusScope.canRequestFocus`
 - `context.focusScope.hasPrimaryFocus`
-
 - `context.focusScope.unfocus()`
 - `context.focusScope.nextFocus()`
 - `context.focusScope.requestFocus()`
@@ -95,22 +93,22 @@ Note: those must be called in the context of a `Scaffold` widget otherwise you m
 - `context.focusScope.consumeKeyboardToken()`
 - `context.closeKeyboard()`
 
-# Install
+# Instalar
 
-Add it in your `pubspec.yaml`:
+Adicione em seu `pubspec.yaml`:
 
 ```yaml
 dependencies:
   build_context: ^2.0.4
 ```
 
-Import it where you want to use it e.g, in your widget's file.
+Importe onde você quer usar, por exemplo, no arquivo do widget.
 
 ```dart
 import "package:build_context/build_context.dart";
 ```
 
-Here is a usage example:
+Aqui está um exemplo de uso:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -135,11 +133,11 @@ class MyHomePage extends StatelessWidget {
 }
 ```
 
-# Support
+# Apoie
 
-You liked this package? then give it a star. If you want to help then:
+Você gostou deste pacote? Então dê uma estrela. Se você quiser ajudar, então:
 
-- Start this repository
-- Send a Pull Request with new features
-- Share this package
-- Create issues if you find a Bug or want to suggest something
+- Inicie este repositório
+- Envie um Pull Request com novas features
+- Compartilhe este pacote
+- Crie issues se você encontrar um Bug ou se quiser sugerir algo.
